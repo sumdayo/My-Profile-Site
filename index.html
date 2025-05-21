@@ -4,10 +4,78 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css">
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <header>
+      <h1>My Profile</h1>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="intro-container">
+          <div class="intro-text">
+            <h2>こんにちは、私はTaniguchiです</h2>
+            <p>奈良先端科学技術大学院大学 情報科学領域 M1(27卒)</p>
+          </div>
+          <div class="intro-photo">
+            <img src="my-photo.jpg" alt="Taniguchiの写真" class="profile-photo">
+          </div>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="tab">
+          <button class="tab-btn" data-target="skill">スキル・資格</button>
+          <button class="tab-btn" data-target="hobby">趣味</button>
+          <button class="tab-btn" data-target="sns">SNS</button>
+        </div>
+
+        <div class="tab-content" id="skill">
+          <h2>スキル・資格</h2>
+          <ul>
+            <li>言語: C++, JavaScript</li>
+            <li>競技プログラミング(AtCoder: 緑)</li>
+            <li>TOEIC: 760</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="hobby">
+          <h2>趣味</h2>
+          <ul>
+            <li class="hobby-item" data-target="travel-photos">旅行</li>
+            <ol class="photo-list" id="travel-photos" style="display: none;">
+              <li><img src="#" alt="旅行時の写真1"></li>
+              <li><img src="#" alt="旅行時の写真2"></li>
+              <li><img src="#" alt="旅行時の写真3"></li>
+            </ol>
+
+            <li class="hobby-item" data-target="bike-photos">ツーリング(バイク)</li>
+            <ol class="photo-list" id="bike-photos" style="display: none;">
+              <li><img src="#" alt="ツーリング時の写真1"></li>
+              <li><img src="#" alt="ツーリング時の写真2"></li>
+              <li><img src="#" alt="ツーリング時の写真3"></li>
+            </ol>
+
+            <li class="hobby-item" data-target="exercise-photos">運動(筋トレ,テニス)</li>
+            <ol class="photo-list" id="exercise-photos" style="display: none;">
+              <li><img src="#" alt="運動時の写真1"></li>
+              <li><img src="#" alt="運動時の写真2"></li>
+            </ol>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="sns">
+          <h2>SNS</h2>
+          <ul class="sns-icons">
+            <li><a href="https://x.com/" target="_blank"><img src="x-icon.png" alt="Xのリンク"></a></li>
+            <li><a href="https://github.com/" target="_blank"><img src="github-icon.png" alt="GitHubのリンク"></a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    
+    <script src="src/main.js"></script>
   </body>
 </html>
