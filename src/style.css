@@ -1,12 +1,28 @@
+:root {
+  --bg1: #0d1b2a;   /* 深い青 */
+  --bg2: #1b263b;   /* 濃い青 */
+  --bg3: #415a77;   /* 明るめの青 */
+  --text: #ffffff;  /* 白 */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   font-family: sans-serif;
-  background-color: #0d1b2a; /* 深い青 */
-  color: white;
+  background-color: var(--bg1); /* 深い青 */
+  color: var(--text);
 }
 
 header {
-  background-color: #1b263b;
+  background-color: var(--bg2);
   padding: 1rem;
   text-align: center;
 }
@@ -30,10 +46,11 @@ header {
   width: 150px;
   height: auto;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 2px solid var(--bg3);
 }
 
 .content {
+  flex: 1;
   padding: 1rem;
 }
 
@@ -47,24 +64,29 @@ header {
 .tab-btn {
   padding: 0.5rem 1rem;
   border: none;
-  background-color: #415a77;
-  color: white;
+  background-color: var(--bg3);
+  color: var(--text);
   cursor: pointer;
   border-radius: 5px;
   transition: background 0.3s;
 }
 
 .tab-btn:hover {
-  background-color: #1b263b;
+  background-color: var(--bg2);
 }
 
 .tab-content {
   display: none;
   animation: fadeIn 0.5s;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
 }
 
 .tab-content.active {
-  display: block;
+  display: flex;
 }
 
 ul, ol {
@@ -79,7 +101,7 @@ ul, ol {
 }
 
 .photo-list {
-  display: none;
+  display: block;
   margin: 0.5rem 0;
 }
 
@@ -92,6 +114,15 @@ ul, ol {
 .sns-icons img {
   width: 40px;
   margin: 0.5rem;
+}
+
+footer {
+  background-color: var(--bg2);
+  padding: 1rem;
+  text-align: center;
+  position: static;
+  width: 100%;
+  margin-top: auto;
 }
 
 @keyframes fadeIn {

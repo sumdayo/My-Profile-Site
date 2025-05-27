@@ -41,29 +41,26 @@
           </ul>
         </div>
 
-        <div class="tab-content" id="hobby">
-          <h2>趣味</h2>
-          <ul>
-            <li class="hobby-item" data-target="travel-photos">旅行</li>
-            <ol class="photo-list" id="travel-photos" style="display: none;">
-              <li><img src="#" alt="旅行時の写真1"></li>
-              <li><img src="#" alt="旅行時の写真2"></li>
-              <li><img src="#" alt="旅行時の写真3"></li>
-            </ol>
-
-            <li class="hobby-item" data-target="bike-photos">ツーリング(バイク)</li>
-            <ol class="photo-list" id="bike-photos" style="display: none;">
-              <li><img src="#" alt="ツーリング時の写真1"></li>
-              <li><img src="#" alt="ツーリング時の写真2"></li>
-              <li><img src="#" alt="ツーリング時の写真3"></li>
-            </ol>
-
-            <li class="hobby-item" data-target="exercise-photos">運動(筋トレ,テニス)</li>
-            <ol class="photo-list" id="exercise-photos" style="display: none;">
-              <li><img src="#" alt="運動時の写真1"></li>
-              <li><img src="#" alt="運動時の写真2"></li>
-            </ol>
-          </ul>
+        <div id="hobby" class="tab-content">
+          <div class="hobby-item">
+            旅行
+            <div class="photo-list">
+              <img src="travel1.jpg" alt="旅行写真1">
+              <img src="travel2.jpg" alt="旅行写真2">
+            </div>
+          </div>
+          <div class="hobby-item">
+            バイク
+            <div class="photo-list">
+              <img src="bike1.jpg" alt="バイク写真1">
+            </div>
+          </div>
+          <div class="hobby-item">
+            運動
+            <div class="photo-list">
+              <img src="sports1.jpg" alt="運動写真1">
+            </div>
+          </div>
         </div>
 
         <div class="tab-content" id="sns">
@@ -75,7 +72,9 @@
         </div>
       </section>
     </main>
-    
+    <footer>
+      <p>&copy; 2025 Taniguchi</p>
+    </footer>   
     <script src="src/main.js"></script>
   </body>
 </html>
