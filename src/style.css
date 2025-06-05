@@ -89,6 +89,10 @@ header {
   display: flex;
 }
 
+.tab-content li {
+  margin-bottom: 2rem;
+}
+
 ul, ol {
   list-style: none;
   padding: 0;
@@ -123,6 +127,18 @@ footer {
   position: static;
   width: 100%;
   margin-top: auto;
+}
+
+.sns-icons img {
+  width: 56px;
+  height: 56px; 
+  margin: 0.5rem;
+}
+
+i {
+  font-size: 32px;
+  color: #333;
+  margin-right: 10px;
 }
 
 @keyframes fadeIn {

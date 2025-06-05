@@ -6,7 +6,7 @@ document.querySelectorAll('.tab-btn').forEach(button => {
       tab.classList.remove('active');
     });
     document.getElementById(targetId).classList.add('active');
-  });
+  }); 
 });
 
 // 趣味セクションの画像切り替え（1つだけ開く）
