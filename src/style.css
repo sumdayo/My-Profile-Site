@@ -1,74 +1,112 @@
 :root {
-  --bg1: #0d1b2a;   /* 深い青 */
-  --bg2: #1b263b;   /* 濃い青 */
-  --bg3: #415a77;   /* 明るめの青 */
-  --text: #ffffff;  /* 白 */
+  --bg1: #0d1b2a;
+  --bg2: #1b263b;
+  --bg3: #415a77;
+  --text: #ffffff;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+* {
+  box-sizing: border-box;
 }
 
 body {
-  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg1);
+  color: var(--text);
   display: flex;
   flex-direction: column;
-  margin: 0;
-  font-family: sans-serif;
-  background-color: var(--bg1); /* 深い青 */
-  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+  letter-spacing: 0.03em; /* 全体的にわずかに広げる */
 }
 
-header {
+a {
+  color: #4fc3f7;
+  text-decoration: underline;
+  transition: color 0.2s;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+a:hover,
+a:focus {
+  color: #1976d2;
+  text-decoration: underline;
+  outline: none;
+}
+
+header, footer {
   background-color: var(--bg2);
-  padding: 1rem;
   text-align: center;
+  padding: 1rem;
+  letter-spacing: 0.05em;
+}
+
+main {
+  flex: 1;
+  width: 100vw;              /* 画面幅いっぱいに広げる */
+  max-width: 1200px;         /* 最大幅を設定（必要に応じて調整） */
+  margin: 0 auto;            /* センター寄せ */
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* 子要素を中央寄せ */
+  box-sizing: border-box;
+  padding: 0 1rem;           /* 端の余白を少し追加（任意） */
 }
 
 .intro {
-  padding: 1rem;
+  padding: 2rem 0.5rem;
   text-align: center;
+  min-height: 220px;         /* 高さを少し高く */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* 垂直方向中央寄せ */
+  align-items: center;       /* 水平方向中央寄せ */
 }
+
+
 
 .intro-container {
   display: flex;
+  flex-direction: column;    /* 縦並びにする */
   justify-content: center;
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
 }
-.intro-text {
-  text-align: center;
-}
-.intro-photo img.profile-photo {
+
+.profile-photo {
   width: 150px;
-  height: auto;
   border-radius: 50%;
-  border: 2px solid var(--bg3);
+  border: 3px solid var(--bg3);
 }
 
 .content {
   flex: 1;
-  padding: 1rem;
+  padding: 2rem 1rem;
+  min-height: 350px;         /* 高さを少し高く */
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* 水平方向中央寄せ */
 }
 
 .tab {
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
   gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .tab-btn {
   padding: 0.5rem 1rem;
-  border: none;
   background-color: var(--bg3);
   color: var(--text);
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
+  letter-spacing: 0.05em;
 }
 
 .tab-btn:hover {
@@ -77,71 +115,71 @@ header {
 
 .tab-content {
   display: none;
-  animation: fadeIn 0.5s;
+  animation: fadeIn 0.3s ease-in-out;
   text-align: center;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 350px;
 }
 
 .tab-content.active {
-  display: flex;
+  display: block;
 }
 
-.tab-content li {
-  margin-bottom: 2rem;
-}
-
-ul, ol {
+.tab-content ul {
+  width: 100%;
+  max-width: 600px;      /* 必要に応じて調整 */
+  margin: 0 auto;
+  padding-left: 0;
+  text-align: center;    /* 真ん中揃えに変更 */
   list-style: none;
-  padding: 0;
+}
+
+.tab-content ul li {
+  margin-bottom: 1.5rem; /* 各項目の間隔を広げる */
+  text-align: center;    /* 真ん中揃えに変更 */
 }
 
 .hobby-item {
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 1rem;
-}
-
-.photo-list {
-  display: block;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 }
 
 .photo-list img {
-  max-width: 100px;
-  margin: 0.5rem;
-  border-radius: 8px;
-}
-
-.sns-icons img {
-  width: 40px;
-  margin: 0.5rem;
-}
-
-footer {
-  background-color: var(--bg2);
-  padding: 1rem;
-  text-align: center;
-  position: static;
+  max-width: 220px;    /* 以前より大きく */
   width: 100%;
-  margin-top: auto;
-}
-
-.sns-icons img {
-  width: 56px;
-  height: 56px; 
+  height: 160px;       /* 高さも指定して縦横比を整える */
+  object-fit: cover;   /* トリミングして美しく表示 */
   margin: 0.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s;
 }
 
-i {
-  font-size: 32px;
-  color: #333;
-  margin-right: 10px;
+.photo-list img:hover {
+  transform: scale(1.05);
+}
+
+.sns-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.sns-icons i {
+  font-size: 2rem;
+  color: #1da1f2;
+  transition: transform 0.3s;
+}
+
+.sns-icons i:hover {
+  transform: scale(1.2);
+  color: var(--bg3);
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

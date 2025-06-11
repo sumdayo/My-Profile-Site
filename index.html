@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>Vite App</title>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Taniguchi's Profile</title>
   </head>
   <body>
     <header>
@@ -17,11 +17,11 @@
       <section class="intro">
         <div class="intro-container">
           <div class="intro-text">
-            <h2>こんにちは、私はTaniguchiです</h2>
-            <p>奈良先端科学技術大学院大学 情報科学領域 M1(27卒)</p>
+            <h2>こんにちは、Taniguchiです</h2>
+            <p>奈良先端科学技術大学院大学 情報科学領域 M1 (27卒)</p>
           </div>
           <div class="intro-photo">
-            <img src="my-photo.jpg" alt="Taniguchiの写真" class="profile-photo">
+            <img src="intro.jpg" alt="Taniguchiの写真" class="profile-photo" />
           </div>
         </div>
       </section>
@@ -33,53 +33,49 @@
           <button class="tab-btn" data-target="sns">SNS</button>
         </div>
 
-        <div class="tab-content" id="skill">
+        <div id="skill" class="tab-content active">
           <h2>スキル・資格</h2>
           <ul>
-            <li>言語: C++, JavaScript</li>
-            <li>競技プログラミング(AtCoder: 緑)</li>
+            <li>使用したことのある言語: C++, JavaScript</li>
+            <li>競技プログラミング (<a href="https://atcoder.jp/users/Taniquchi" target="_blank" rel="noopener noreferrer">AtCoder</a>: 緑)</li>
             <li>TOEIC: 760</li>
           </ul>
         </div>
 
         <div id="hobby" class="tab-content">
+          <h2>趣味</h2>
           <div class="hobby-item">
-            旅行
+            <p>旅行</p>
             <div class="photo-list">
-              <img src="travel1.jpg" alt="旅行写真1">
-              <img src="travel2.jpg" alt="旅行写真2">
+              <img src="hobby1.jpg" alt="旅行写真1" />
+              <img src="hobby2.jpg" alt="旅行写真2" />
             </div>
           </div>
           <div class="hobby-item">
-            バイク
+            <p>バイク</p>
             <div class="photo-list">
-              <img src="bike1.jpg" alt="バイク写真1">
-            </div>
-          </div>
-          <div class="hobby-item">
-            運動
-            <div class="photo-list">
-              <img src="sports1.jpg" alt="運動写真1">
+              <img src="hobby3.jpg" alt="バイク写真1" />
             </div>
           </div>
         </div>
 
-        <div class="tab-content" id="sns">
+        <div id="sns" class="tab-content">
           <h2>SNS</h2>
           <ul class="sns-icons">
-            <a href="https://twitter.com/your_handle" target="_blank">
-              <i class="fab fa-twitter"></i>
+            <a href="https://x.com/Taniquchi" target="_blank">
+              <i class="fab fa-x-twitter"></i>
             </a>
-            <a href="https://github.com/your_username" target="_blank">
+            <a href="https://github.com/sumdayo" target="_blank">
               <i class="fab fa-github"></i>
             </a>
           </ul>
         </div>
       </section>
     </main>
+
     <footer>
       <p>&copy; 2025 Taniguchi</p>
-    </footer>   
+    </footer>
     <script src="src/main.js"></script>
   </body>
 </html>
